@@ -1,0 +1,43 @@
+<!DOCTYPE html >
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        #caja{
+            height: 350px;
+            width: 350px;
+            border: solid;
+            border-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div name="caja" id="caja"></div>
+    <br>
+    <div type="text" name="salida" id="salida"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#caja").mouseenter(function(){
+                $("#caja").css("border-color", "red");
+            });
+            $("#caja").mouseleave(function(){
+                $("#caja").css("border-color", "blue");
+            });
+            $("#caja").dblclick(function(){
+                //$("#caja").css("background-color", "yellow");
+                $("#caja").replaceWith('<img id="imagen" src="https://media.istockphoto.com/id/1327529190/es/foto/bola-de-playa-inflable-de-colores-aislada-sobre-fondo-blanco-ilustraci%C3%B3n-3d.jpg?s=612x612&w=0&k=20&c=1Pt8p3ABvLuHMxaKNsCf5532nieDH_2Ka_fnbE_X_C8=" width="350" height="350">');
+            });
+            $("#caja").hover(
+                function(){
+                    $("#salida").text("Ratón encima");
+                },
+                function(){
+                    $("#salida").text("Ratón fuera");
+                }
+            );
+        });
+    </script>
+</body>
+</html>

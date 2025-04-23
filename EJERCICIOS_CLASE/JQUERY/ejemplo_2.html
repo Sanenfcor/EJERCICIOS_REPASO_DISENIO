@@ -1,0 +1,74 @@
+<!DOCTYPE html >
+<html>
+<head>
+    <meta charset="utf-8">
+    <script
+    src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        .negrita{
+            font-weight: bold;
+        }
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#p1, #p2, #p3, #titulo").click(function () {
+                $(this).css("color", "green");
+            });
+            $("p").click(function () {
+                $(this).removeClass("negrita");
+            });
+            $("#aRojo").click(function () {
+                $("*").css("color", "red");
+            });
+            $("#aNegro").click(function () {
+                $("*").css("color", "black");
+            });
+            $("#aNegrita").click(function(){
+                $("p").addClass("negrita");
+            });
+            $("#Negrita-A-Rosa").click(function(){
+                $(".negrita").css("color", "pink");
+            });
+            $("#duoDinamico").click(function(){
+                $("#duo p").css("color", "yellow");
+            });
+            $("#listoUNO").click(function(){
+                $("ul > li:nth-child(1)").css("color", "orange");
+            });
+            $("#listoDOS").click(function(){
+                $("ul > li:nth-child(2)").css("color", "blue");
+            });
+            $("#listoDOS").click(function(){
+                $("#duo > p:nth-child(2)").css("color", "blue");
+            });
+            $("#alOtro").click(function(){
+                window.location.href = "ejemplo_1.html";
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1 id="titulo" name="titulo">ESTO ES UN TITULO</h1>
+    <div id="duo" name="duo">
+        <p id="p1" name="p1">Esto es un párrafo</p>
+        <p id="p2" name="p2">Esto es otro párrafo</p>
+    </div>
+    <p class="negrita" id="p3" name="p3">Esto es un párrafo en negrita</p>
+    <ul>
+        <li>UNO</li>
+        <li>DOS</li>
+        <li>TRES</li>
+        <li>CUATRO</li>
+    </ul>
+    <div class="button">
+        <button id="aRojo">ROJO</button>
+        <button id="aNegro">NEGRO</button>
+        <button id="aNegrita">NEGRITA</button>
+        <button id="Negrita-A-Rosa">NEGRITA A ROSA</button>
+        <button id="duoDinamico">Zipi y Zape</button>
+        <button id="listoUNO">CAMBIO 1er HIJO</button>
+        <button id="listoDOS">CAMBIO 2do HIJO</button>
+        <button id="alOtro">OTRO</button>
+    </div>
+</body>
+</html>
